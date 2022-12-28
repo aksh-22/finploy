@@ -19,7 +19,7 @@ export default (
       return initialState;
 
     case SET_PARTNER_TOKEN:
-      return initialState;
+      return {...state, token: action.payload};
     default:
       return state;
   }

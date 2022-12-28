@@ -1,21 +1,22 @@
+import React, {useRef, useState} from 'react';
 import {
-  View,
+  ActivityIndicator,
   Text,
   TextInput,
   TouchableOpacity,
-  ActivityIndicator,
+  View,
 } from 'react-native';
-import React, {useRef, useState} from 'react';
-import styles from './partnerLogin.style';
-import BgComponent from './../../../../components/Bg';
-import GreenBtn from '../../../../components/Buttons/BasicBtn';
-import TextInputComp from '../../../../components/TextInputComp';
-import {CommonStyle, wp} from '../../../../Theme/Dimensions';
-import Colors from '../../../../Theme/Colors';
-import {english} from '../../../../Theme/string';
-import {useRequest} from '../../../../hooks/useRequest';
-import {login, verifyLogin} from './../../../../api/auth.service';
+import {useSelector} from 'react-redux';
 import CustomButton from '../../../../components/customButton/CustomButton';
+import TextInputComp from '../../../../components/TextInputComp';
+import usePartnerDispatch from '../../../../hooks/usePartnerDispatch';
+import {useRequest} from '../../../../hooks/useRequest';
+import Colors from '../../../../Theme/Colors';
+import {CommonStyle, wp} from '../../../../Theme/Dimensions';
+import {english} from '../../../../Theme/string';
+import {login, verifyLogin} from './../../../../api/auth.service';
+import BgComponent from './../../../../components/Bg';
+import styles from './partnerLogin.style';
 
 type Props = {};
 
@@ -39,9 +40,17 @@ const PartnerLogin = (props: Props) => {
   };
 
   const onOtpSuccess = (otpFetchedData: any) => {
-    console.log('fetchedData', otpFetchedData);
+    console.log(
+      'otpFetchedData',
+      JSON.stringify(otpFetchedData.data.token, null, 2),
+    );
+    onAction(otpFetchedData.data.token);
   };
 
+  // Hooks imported
+  const token = useSelector((state: any) => state.partnerUserReducer.token);
+  console.log('token', JSON.stringify(token, null, 2));
+  const {onAction} = usePartnerDispatch({ACTION: 'SET_PARTNER_TOKEN'});
   const {isLoading, sendRequest} = useRequest({api: login, onSuccess});
   const {isLoading: otpLoading, sendRequest: otpSendRequest} = useRequest({
     api: verifyLogin,
