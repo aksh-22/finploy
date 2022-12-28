@@ -1,0 +1,18 @@
+export const colors = {
+  gray: '#9E9E9E',
+  btnColour: '#175DA8',
+  lightGray: '#E9E9E9',
+  blue: '#175DA8',
+  green: '#4EA647',
+  rowBg: '#F5F5F5',
+  primaryGeen: '#4EA647',
+  orange: '#FF8800',
+  lightBlue: '#E8EFF6',
+  homeCardBg: '#F1F1F1',
+  lineColour: '#CCCCCC',
+  cardBg: '#EFF5FB',
+  footerBg: '#DDDDDD',
+  cardBg: '#EEF6FF',
+  darkGray: '#E6E6E6',
+  daerkerGray: '#7A7A7A',
+};
