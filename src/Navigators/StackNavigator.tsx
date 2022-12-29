@@ -1,10 +1,17 @@
+import {createDrawerNavigator} from '@react-navigation/drawer';
+import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import {SafeAreaView, StatusBar} from 'react-native';
+import LoginCandidate from '../Screens/Auth/LoginCandidate';
+import FilterScreen from '../Screens/FilterScreen';
+import JobDetails from '../Screens/JobDetails';
 import LaunchScreen from '../Screens/LaunchScreen';
 import LaunchScreen2 from '../Screens/LaunchScreen2';
 import LoginScreen from '../Screens/LoginScreen';
 import OnbardingScreen from '../Screens/OnbardingScreen';
-import {createDrawerNavigator} from '@react-navigation/drawer';
 import ProfileUpdate1 from '../Screens/ProfileUpdateScreens/ProfileUpdate1';
+import ProfileUpdate10 from '../Screens/ProfileUpdateScreens/ProfileUpdate10';
+import ProfileUpdate11 from '../Screens/ProfileUpdateScreens/ProfileUpdate11';
 import ProfileUpdate2 from '../Screens/ProfileUpdateScreens/ProfileUpdate2';
 import ProfileUpdate3 from '../Screens/ProfileUpdateScreens/ProfileUpdate3';
 import ProfileUpdate4 from '../Screens/ProfileUpdateScreens/ProfileUpdate4';
@@ -13,44 +20,36 @@ import ProfileUpdate6 from '../Screens/ProfileUpdateScreens/ProfileUpdate6';
 import ProfileUpdate7 from '../Screens/ProfileUpdateScreens/ProfileUpdate7';
 import ProfileUpdate8 from '../Screens/ProfileUpdateScreens/ProfileUpdate8';
 import ProfileUpdate9 from '../Screens/ProfileUpdateScreens/ProfileUpdate9';
-import ProfileUpdate10 from '../Screens/ProfileUpdateScreens/ProfileUpdate10';
-import ProfileUpdate11 from '../Screens/ProfileUpdateScreens/ProfileUpdate11';
-import FilterScreen from '../Screens/FilterScreen';
-import MyTabs from './Tabs';
-import JobDetails from '../Screens/JobDetails';
 import ResumeProfileToFill from '../Screens/ResumeProfileToFill';
-import LoginCandidate from '../Screens/Auth/LoginCandidate';
-import {NavigationContainer} from '@react-navigation/native';
-import International from './../Screens/Auth/International';
-import {SafeAreaView, StatusBar} from 'react-native';
 import Colors from '../Theme/Colors';
+import International from './../Screens/Auth/International';
+import MyTabs from './Tabs';
 // import Landing from '../partner screen/landing';
-import Talents from '../partner screen/Talents';
 import Jobs from '../partner screen/Jobs';
-import Tutorials from '../partner screen/Tutorials';
-import SocialImage from '../partner screen/SocialImage';
 import MainMenu from '../partner screen/MainMenu';
 import Recruter from '../partner screen/Recruter';
 import Reports from '../partner screen/Reports';
+import SocialImage from '../partner screen/SocialImage';
+import Talents from '../partner screen/Talents';
+import Tutorials from '../partner screen/Tutorials';
 import Withdraw from '../partner screen/Withdraw';
 // import ReferPartner from '../partner screen/ReferPartner';
-import MyPartner from '../partner screen/MyPartner';
-import ReferPartner from '../partner screen/ReferPartner';
-import ReferCandidate from '../partner screen/ReferCandidate';
-import TrackMyCandidate from '../partner screen/TrackMyCandidate';
-import CustomerList from '../partner screen/CustomerList';
-import MyCandidates from '../partner screen/MyCandidates';
-import Referpartner1 from '../partner screen/Referpartner1';
-import Refercandidate1 from '../partner screen/Refercandidate1.js';
-import Mycandidate from '../partner screen/Mycandidate';
-import Mycandidateshare from '../partner screen/Mycandidateshare';
-import DrawerNavigator from './Tabs';
-import Education from '../components/ProfileFillComponents/Education';
-import Landing from '../partner screen/landing/Landing';
-import AllJobsScreen from '../Screens/AllJobsScreen';
 import {Provider} from 'react-redux';
+import Education from '../components/ProfileFillComponents/Education';
+import CustomerList from '../partner screen/CustomerList';
+import Landing from '../partner screen/landing/Landing';
+import Mycandidate from '../partner screen/Mycandidate';
+import MyCandidates from '../partner screen/MyCandidates';
+import Mycandidateshare from '../partner screen/Mycandidateshare';
+import MyPartner from '../partner screen/MyPartner';
+import ReferCandidate from '../partner screen/ReferCandidate';
+import Refercandidate1 from '../partner screen/Refercandidate1.js';
+import ReferPartner from '../partner screen/ReferPartner';
+import Referpartner1 from '../partner screen/Referpartner1';
+import TrackMyCandidate from '../partner screen/TrackMyCandidate';
 import store from '../redux/reducers';
-import PartnerAuthStack from './PartnerAuthStack';
+import AllJobsScreen from '../Screens/AllJobsScreen';
+import PartnerStack from './PartnerStack';
 
 // import Refercandidate1 from '../partner screen/ReferPartner';
 
@@ -63,7 +62,7 @@ function AuthStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="PartnerAuthStack" component={PartnerAuthStack} />
+      <Stack.Screen name="PartnerStack" component={PartnerStack} />
       <Stack.Screen
         options={{headerShown: false}}
         name="Launch"

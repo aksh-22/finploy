@@ -1,10 +1,11 @@
 import {StyleSheet} from 'react-native';
+import Colors from '../../Theme/Colors';
 import {hp, wp} from '../../Theme/Dimensions';
 
 export default StyleSheet.create({
-  conteiner: {
+  container: {
     flexDirection: 'row',
-    justifyContent: 'space-evenly',
+    justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: '#F1F1F1',
     marginHorizontal: wp('4'),
@@ -12,10 +13,12 @@ export default StyleSheet.create({
     borderTopRightRadius: 8,
     paddingVertical: hp('2.8'),
     marginTop: hp('3'),
+    paddingHorizontal: wp(6),
   },
   text: {
     fontSize: 16,
     textAlign: 'center',
+    color: Colors.Black,
   },
   programText: {
     fontSize: 24,
@@ -30,6 +33,7 @@ export default StyleSheet.create({
   bottomText: {
     marginTop: hp('2'),
     paddingHorizontal: wp('4'),
+    color: Colors.Black,
   },
   subContainer: {
     paddingHorizontal: wp('4'),
@@ -62,7 +66,7 @@ export default StyleSheet.create({
     margin: 10,
   },
   grayContainer: {
-    justifyContent: 'space-evenly',
+    // justifyContent: 'space-evenly',
     flexDirection: 'row',
     alignItems: 'center',
     backgroundColor: '#F1F1F1',
@@ -73,5 +77,7 @@ export default StyleSheet.create({
     borderTopColor: '#CCCCCC',
     borderWidth: 1,
     borderColor: '#F1F1F1',
+    justifyContent: 'space-between',
+    paddingHorizontal: wp(6),
   },
 });

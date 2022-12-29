@@ -13,7 +13,8 @@ import styles from './landing.style';
 import FloatingButton from '../../components/FloatingButton';
 import Questions from '../../components/Questions';
 import Headerpartner from '../../components/Header-p';
-import Partnertabs from '../../Navigators/partnertabs';
+import Partnertabs from '../../Navigators/PartnerTabs';
+import Colors from '../../Theme/Colors';
 
 type Props = {};
 
@@ -88,9 +89,13 @@ const Landing = (props: Props) => {
           paddingHorizontal: 16,
         }}>
         <Image source={item.image} />
-        <Text style={{marginTop: 16}}>{item.description}</Text>
-        <Text style={{fontWeight: 'bold', marginTop: 16}}>- {item.name}</Text>
-        <Text style={{marginTop: 4}}>{item.company}</Text>
+        <Text style={{marginTop: 16, color: Colors.Black}}>
+          {item.description}
+        </Text>
+        <Text style={{fontWeight: 'bold', marginTop: 16, color: Colors.Black}}>
+          - {item.name}
+        </Text>
+        <Text style={{marginTop: 4, color: Colors.Black}}>{item.company}</Text>
       </View>
     );
   };
@@ -108,10 +113,18 @@ const Landing = (props: Props) => {
           paddingHorizontal: 16,
         }}>
         <Image source={item.image} />
-        <Text style={{fontWeight: 'bold', marginTop: 16, textAlign: 'center'}}>
+        <Text
+          style={{
+            fontWeight: 'bold',
+            marginTop: 16,
+            textAlign: 'center',
+            color: Colors.Black,
+          }}>
           {item.name}
         </Text>
-        <Text style={{marginTop: 4}}>{item.description}</Text>
+        <Text style={{marginTop: 4, color: Colors.Black}}>
+          {item.description}
+        </Text>
       </View>
     );
   };
@@ -158,8 +171,8 @@ const Landing = (props: Props) => {
             Refer your friends and Earn Upto 50% per Hire
           </Text>
 
-          <View style={styles.conteiner}>
-            <Text>Affiliate Referral Code</Text>
+          <View style={styles.container}>
+            <Text style={{color: Colors.Black}}>Affiliate Referral Code</Text>
             <View style={styles.createCodeBtn}>
               <Text style={styles.plus}>+</Text>
               <Text style={[styles.plus, {marginLeft: 10}]}>Create Code</Text>
@@ -167,7 +180,7 @@ const Landing = (props: Props) => {
           </View>
 
           <View style={styles.grayContainer}>
-            <Text>Kritika sharma</Text>
+            <Text style={{color: Colors.Black}}>Kritika sharma</Text>
             <TouchableOpacity onPress={myshare}>
               <Image source={require('./../../Assets/Share2.png')} />
             </TouchableOpacity>
@@ -236,6 +249,7 @@ const Landing = (props: Props) => {
               fontWeight: 'bold',
               marginTop: hp('4'),
               marginLeft: wp('4'),
+              color: Colors.Black,
             }}>
             FAQ’s
           </Text>
@@ -254,6 +268,7 @@ const Landing = (props: Props) => {
                 paddingTop: hp('3'),
                 marginLeft: wp('4'),
                 textAlign: 'center',
+                color: Colors.Black,
               }}>
               Need Help? Call Now:
             </Text>
@@ -270,7 +285,9 @@ const Landing = (props: Props) => {
                   source={require('./../../Assets/flag1.png')}
                 />
                 <View style={{marginLeft: 20}}>
-                  <Text style={{fontWeight: 'bold'}}>+1 650 488 5192</Text>
+                  <Text style={{fontWeight: 'bold', color: Colors.Black}}>
+                    +1 650 488 5192
+                  </Text>
                 </View>
               </View>
               <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -279,7 +296,9 @@ const Landing = (props: Props) => {
                   source={require('./../../Assets/flag2.png')}
                 />
                 <View style={{marginLeft: 20}}>
-                  <Text style={{fontWeight: 'bold'}}>+44 140 488 5192</Text>
+                  <Text style={{fontWeight: 'bold', color: Colors.Black}}>
+                    +44 140 488 5192
+                  </Text>
                 </View>
               </View>
             </View>
@@ -296,7 +315,9 @@ const Landing = (props: Props) => {
                 source={require('./../../Assets/flag3.png')}
               />
               <View style={{marginLeft: 20}}>
-                <Text style={{fontWeight: 'bold'}}>+91 140 488 5192</Text>
+                <Text style={{fontWeight: 'bold', color: Colors.Black}}>
+                  +91 140 488 5192
+                </Text>
               </View>
             </View>
 
@@ -312,7 +333,9 @@ const Landing = (props: Props) => {
                 source={require('./../../Assets/flag4.png')}
               />
               <View style={{marginLeft: 20}}>
-                <Text style={{fontWeight: 'bold'}}>Hello@finploy.in</Text>
+                <Text style={{fontWeight: 'bold', color: Colors.Black}}>
+                  Hello@finploy.in
+                </Text>
               </View>
             </View>
           </View>
@@ -324,7 +347,9 @@ const Landing = (props: Props) => {
               paddingVertical: 24,
               paddingHorizontal: 16,
             }}>
-            <Text style={{alignItems: 'center'}}>Privacy Policy</Text>
+            <Text style={{alignItems: 'center', color: Colors.Black}}>
+              Privacy Policy
+            </Text>
             <Image
               style={{marginTop: 16}}
               source={require('./../../Assets/logo.png')}
@@ -334,7 +359,7 @@ const Landing = (props: Props) => {
                 // style={styles.img}
                 source={require('./../../Assets/copyright.png')}
               />
-              <Text style={{marginLeft: 8}}>
+              <Text style={{marginLeft: 8, color: Colors.Black}}>
                 Copyright 2021 My Remote Developer Inc. 548 Market St/ PMB 60080
                 San F5ranise California{' '}
               </Text>

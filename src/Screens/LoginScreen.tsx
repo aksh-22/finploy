@@ -40,7 +40,7 @@ function LoginScreen() {
             activeOpacity={5}
             style={styles.button}
             onPress={() => {
-              navigation.navigate('PartnerAuthStack');
+              navigation.navigate('PartnerStack');
             }}>
             <Text style={styles.txt}>{english.Partner}</Text>
             <Partner height={ImageSize} width={ImageSize} />

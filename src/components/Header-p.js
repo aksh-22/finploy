@@ -5,17 +5,18 @@ import React from 'react';
 import MenuIcon from '../Assets/Svg/MenuIcon.svg';
 import Colors from '../Theme/Allcolors';
 import {hp} from '../Theme/Dimensions';
-import { useNavigation } from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 export default function Headerpartner(props) {
-    const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
     <View style={styles.headerContainer}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
-        <TouchableOpacity 
-        // onPress={() => props.navigation.openDrawer()}
-        onPress={()=>{navigation.navigate('Menu-p')}}
-        >
+        <TouchableOpacity
+          // onPress={() => props.navigation.openDrawer()}
+          onPress={() => {
+            navigation.navigate('Menu-p');
+          }}>
           <MenuIcon style={{margin: 5}} />
         </TouchableOpacity>
         <Image
@@ -37,7 +38,6 @@ export default function Headerpartner(props) {
 
 const styles = StyleSheet.create({
   headerContainer: {
-    marginTop: hp(2),
     padding: 10,
     flexDirection: 'row',
     justifyContent: 'space-between',
