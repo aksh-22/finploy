@@ -12,8 +12,8 @@ import Share from 'react-native-share';
 import styles from './landing.style';
 import FloatingButton from '../../components/FloatingButton';
 import Questions from '../../components/Questions';
-import Headerpartner from '../../components/Header-p';
-import Partnertabs from '../../Navigators/PartnerTabs';
+// import Headerpartner from '../../components/Header-p';
+import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
 import Colors from '../../Theme/Colors';
 
 type Props = {};
@@ -131,7 +131,7 @@ const Landing = (props: Props) => {
 
   return (
     <View style={{flex: 1, height: hp(100)}}>
-      <Headerpartner />
+      {/* <Headerpartner /> */}
       <ScrollView style={{backgroundColor: '#FFFFFF', height: hp(100)}}>
         <View style={{backgroundColor: '#FFFFFF', marginTop: hp('8')}}>
           <Text style={styles.text}>Welcome to FINPLOY</Text>

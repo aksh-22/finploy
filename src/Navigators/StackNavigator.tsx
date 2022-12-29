@@ -26,7 +26,6 @@ import International from './../Screens/Auth/International';
 import MyTabs from './Tabs';
 // import Landing from '../partner screen/landing';
 import Jobs from '../partner screen/Jobs';
-import MainMenu from '../partner screen/MainMenu';
 import Recruter from '../partner screen/Recruter';
 import Reports from '../partner screen/Reports';
 import SocialImage from '../partner screen/SocialImage';
@@ -62,7 +61,6 @@ function AuthStackNavigator() {
       screenOptions={{
         headerShown: false,
       }}>
-      <Stack.Screen name="PartnerStack" component={PartnerStack} />
       <Stack.Screen
         options={{headerShown: false}}
         name="Launch"
@@ -290,6 +288,7 @@ const CommonNavigator = () => {
             screenOptions={{
               headerShown: false,
             }}>
+            <Stack.Screen name="PartnerStack" component={PartnerStack} />
             <Stack.Screen
               name="AuthStackNavigator"
               component={AuthStackNavigator}

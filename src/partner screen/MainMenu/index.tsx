@@ -10,18 +10,22 @@ import {
 import Footer from '../../components/Footer';
 import Header from '../../components/Header';
 import styles from './styles';
-import {useNavigation} from '@react-navigation/native';
+import {useNavigation, useRoute} from '@react-navigation/native';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Partnertabs from '../../Navigators/PartnerTabs';
-import Headerpartner from '../../components/Header-p';
+import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
+// import Headerpartner from '../../components/Header-p';
 
 const MainMenu = () => {
-  const navigation = useNavigation();
+  const navigation: any = useNavigation();
 
-  const RenderMenuItem = ({imageUrl, title}) => {
+  const route = useRoute();
+
+  console.log('route', route.name);
+
+  const RenderMenuItem = ({imageUrl, title}: any) => {
     return (
       <View style={styles.subContainer}>
         <Image style={{height: 24, width: 24}} source={imageUrl} />
@@ -31,22 +35,18 @@ const MainMenu = () => {
   };
   return (
     <SafeAreaView style={{flex: 1, height: hp(100), backgroundColor: 'white'}}>
-      {/* <View style={{flex:1}}> */}
       <View
         style={{
           backgroundColor: 'white',
           borderBottomColor: '#DDDDDD',
           borderBottomWidth: 1,
-          marginTop: hp(1),
         }}>
-        <Headerpartner />
         <View
           style={{
             flexDirection: 'row',
             alignItems: 'center',
             padding: 16,
             elevation: 1,
-            marginTop: 47,
             backgroundColor: 'white',
           }}>
           <Image
@@ -226,11 +226,6 @@ const MainMenu = () => {
           </View>
         </View>
       </ScrollView>
-      <View style={{marginBottom: hp(8)}}>
-        <Partnertabs />
-      </View>
-
-      {/* </View> */}
     </SafeAreaView>
   );
 };

@@ -1,12 +1,11 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React, {useEffect} from 'react';
-import {StatusBar} from 'react-native';
 import {useSelector} from 'react-redux';
-import PartnerAuthStack from './PartnerAuthStack';
-import PartnerTabs from '../PartnerTabs';
-import PartnerMenu from './PartnerMenu';
-import storage from '../../Utils/storage';
 import usePartnerDispatch from '../../hooks/usePartnerDispatch';
+import storage from '../../Utils/storage';
+import HeaderPartner from './../../components/Header-p';
+import PartnerAuthStack from './PartnerAuthStack';
+import PartnerTabs from './PartnerTabs';
 
 const Stack = createNativeStackNavigator();
 
@@ -22,12 +21,11 @@ const PartnerStack = () => {
 
   return (
     <>
-      <StatusBar />
+      {token && <HeaderPartner />}
       <Stack.Navigator screenOptions={{headerShown: false}}>
         {token ? (
           <>
             <Stack.Screen name="PartnerTabs" component={PartnerTabs} />
-            <Stack.Screen name="PartnerMenu" component={PartnerMenu} />
           </>
         ) : (
           <Stack.Screen name="PartnerAuthStack" component={PartnerAuthStack} />

@@ -8,8 +8,8 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
-import Partnertabs from '../../Navigators/PartnerTabs';
-import Headerpartner from '../../components/Header-p';
+import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
+// import Headerpartner from '../../components/Header-p';
 
 const Reports = () => {
   const RenderTableContent = ({titleText}) => {
@@ -58,7 +58,7 @@ const Reports = () => {
   };
   return (
     <View style={{flex: 1, height: hp(100)}}>
-      <Headerpartner />
+      {/* <Headerpartner /> */}
       <ScrollView style={{backgroundColor: 'white', height: hp(100)}}>
         <View style={styles.cardContainer}>
           <Text style={styles.mainText}>Reports</Text>

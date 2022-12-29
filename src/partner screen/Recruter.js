@@ -23,8 +23,8 @@ import MenuIcon from '../Assets/Svg/MenuIcon.svg';
 import {Colors} from '../Theme/Allcolors';
 import {colors} from '../Utils/colors';
 import Footer from '../components/Footer';
-import Partnertabs from '../Navigators/PartnerTabs';
-import Headerpartner from '../components/Header-p';
+import Partnertabs from '../Navigators/partnerStack/PartnerTabs';
+// import Headerpartner from '../components/Header-p';
 const Recruter = () => {
   const data = [
     {
@@ -169,7 +169,7 @@ const Recruter = () => {
 
   return (
     <View style={{flex: 1, height: hp(100)}}>
-      <Headerpartner />
+      {/* <Headerpartner /> */}
       <ScrollView style={{height: hp(100)}}>
         <View style={{flex: 1, backgroundColor: 'white'}}>
           <View

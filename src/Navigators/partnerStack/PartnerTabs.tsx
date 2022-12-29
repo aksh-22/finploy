@@ -1,20 +1,21 @@
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import React from 'react';
 import {Image} from 'react-native';
-import HomeIcon from '../Assets/Svg/HomeIcon.svg';
-import ReferCandidateIcon from '../Assets/Svg/ReferCandidateIcon.svg';
-import ReferPartnerIcon from '../Assets/Svg/ReferPartnerIcon.svg';
-import CustomerList from '../partner screen/CustomerList';
-import Landing from '../partner screen/landing/Landing';
-import MyCandidates from '../partner screen/MyCandidates';
-import MyPartner from '../partner screen/MyPartner';
-import ReferCandidate from '../partner screen/ReferCandidate';
-import Referpartner1 from '../partner screen/Referpartner1';
+import HomeIcon from './../../Assets/Svg/HomeIcon.svg';
+import ReferCandidateIcon from './../../Assets/Svg/ReferCandidateIcon.svg';
+import ReferPartnerIcon from './../../Assets/Svg/ReferPartnerIcon.svg';
+import CustomerList from './../../partner screen/CustomerList';
+import Landing from './../../partner screen/landing/Landing';
+import MyCandidates from './../../partner screen/MyCandidates';
+import MyPartner from './../../partner screen/MyPartner';
+import ReferCandidate from './../../partner screen/ReferCandidate';
+import Referpartner1 from './../../partner screen/Referpartner1';
 import {useNavigation} from '@react-navigation/native';
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from 'react-native-responsive-screen';
+import MainMenu from '../../partner screen/MainMenu';
 
 const Tab = createBottomTabNavigator();
 
@@ -52,7 +53,7 @@ const PartnerTabs = () => {
         options={{
           tabBarIcon: () => (
             <Image
-              source={require('../Assets/folder-2.png')}
+              source={require('../../Assets/folder-2.png')}
               style={{width: wp(6), height: hp(3)}}
             />
           ),
@@ -64,7 +65,7 @@ const PartnerTabs = () => {
         options={{
           tabBarIcon: () => (
             <Image
-              source={require('../Assets/people.png')}
+              source={require('../../Assets/people.png')}
               style={{width: wp(6), height: hp(3)}}
             />
           ),
@@ -76,10 +77,17 @@ const PartnerTabs = () => {
         options={{
           tabBarIcon: () => (
             <Image
-              source={require('../Assets/profile-2user.png')}
+              source={require('../../Assets/profile-2user.png')}
               style={{width: wp(6), height: hp(3)}}
             />
           ),
+        }}
+      />
+      <Tab.Screen
+        name="MainMenu"
+        component={MainMenu}
+        options={{
+          tabBarButton: () => null,
         }}
       />
     </Tab.Navigator>

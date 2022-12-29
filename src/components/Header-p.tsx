@@ -5,17 +5,26 @@ import React from 'react';
 import MenuIcon from '../Assets/Svg/MenuIcon.svg';
 import Colors from '../Theme/Allcolors';
 import {hp} from '../Theme/Dimensions';
-import {useNavigation} from '@react-navigation/native';
+import {
+  useNavigation,
+  useRoute,
+  useNavigationState,
+} from '@react-navigation/native';
 
-export default function Headerpartner(props) {
-  const navigation = useNavigation();
+export default function HeaderPartner(props: any) {
+  const navigation: any = useNavigation();
+
+  const route = useRoute();
+
+  console.log('route', route);
+
   return (
     <View style={styles.headerContainer}>
       <View style={{flexDirection: 'row', alignItems: 'center'}}>
         <TouchableOpacity
           // onPress={() => props.navigation.openDrawer()}
           onPress={() => {
-            navigation.navigate('PartnerMenu');
+            navigation.navigate('MainMenu');
           }}>
           <MenuIcon style={{margin: 5}} />
         </TouchableOpacity>

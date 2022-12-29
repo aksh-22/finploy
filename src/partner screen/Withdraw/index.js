@@ -10,14 +10,14 @@ import {
 } from 'react-native';
 import Footer from '../../components/Footer';
 import Questions from '../../components/Questions';
-import Partnertabs from '../../Navigators/PartnerTabs';
+import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
 import {colors} from '../../Utils/colors';
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from 'react-native-responsive-screen';
 import HeaderBar from '../../components/Header';
-import Headerpartner from '../../components/Header-p';
+// import Headerpartner from '../../components/Header-p';
 
 const Withdraw = () => {
   const [selected, setSelected] = useState(false);
@@ -59,7 +59,7 @@ const Withdraw = () => {
   };
   return (
     <View style={{flex: 1, height: hp(100)}}>
-      <Headerpartner />
+      {/* <Headerpartner /> */}
       <ScrollView style={{height: hp(100)}}>
         <View>
           <View style={styles.subContainer}>
