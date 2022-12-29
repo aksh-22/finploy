@@ -35,15 +35,10 @@ const PartnerLogin = (props: Props) => {
   let otp4: any = useRef();
 
   const onSuccess = (fetchedData: any) => {
-    console.log('fetchedData', fetchedData);
     setOtpShow(true);
   };
 
   const onOtpSuccess = (otpFetchedData: any) => {
-    console.log(
-      'otpFetchedData',
-      JSON.stringify(otpFetchedData.data.token, null, 2),
-    );
     onAction(otpFetchedData.data.token);
   };
 
@@ -74,8 +69,6 @@ const PartnerLogin = (props: Props) => {
       phone: PhoneNumber,
       otp: `${Otp1}${Otp2}${Otp3}${Otp4}`,
     };
-
-    console.log('dataToSend', dataToSend);
 
     otpSendRequest(dataToSend);
   };

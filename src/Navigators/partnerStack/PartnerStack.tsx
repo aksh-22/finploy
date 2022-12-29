@@ -16,7 +16,6 @@ const PartnerStack = () => {
 
   useEffect(() => {
     storage.getItem('SET_PARTNER_TOKEN').then(val => {
-      console.log('val', val);
       onAction(val);
     });
   }, []);

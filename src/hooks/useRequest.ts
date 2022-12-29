@@ -19,7 +19,6 @@ export const useRequest = ({
     setIsLoading(true);
     await api(dataToSend)
       .then((res: any) => {
-        console.log('res', JSON.stringify(res, null, 2));
         onSuccess && onSuccess(res);
       })
       .catch((error: any) => {
