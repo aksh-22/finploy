@@ -1,6 +1,6 @@
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import React from 'react';
-import PartnerLogin from '../Screens/Partner/auth/login/PartnerLogin';
+import PartnerLogin from '../../Screens/Partner/auth/login/PartnerLogin';
 
 const Stack = createNativeStackNavigator();
 

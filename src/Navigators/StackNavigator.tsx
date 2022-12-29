@@ -49,7 +49,7 @@ import Referpartner1 from '../partner screen/Referpartner1';
 import TrackMyCandidate from '../partner screen/TrackMyCandidate';
 import store from '../redux/reducers';
 import AllJobsScreen from '../Screens/AllJobsScreen';
-import PartnerStack from './PartnerStack';
+import PartnerStack from './partnerStack/PartnerStack';
 
 // import Refercandidate1 from '../partner screen/ReferPartner';
 
@@ -78,11 +78,7 @@ function AuthStackNavigator() {
         name="login"
         component={LoginScreen}
       />
-      <Stack.Screen
-        options={{headerShown: false}}
-        name="Menu-p"
-        component={MainMenu}
-      />
+
       <Stack.Screen
         options={{headerShown: false}}
         name="Recruter-p"

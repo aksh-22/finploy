@@ -1,14 +1,16 @@
 import {useDispatch} from 'react-redux';
+import storage from '../Utils/storage';
 
-type Props = {
+export type partnerActionType = {
   ACTION: 'SET_PARTNER_USER' | 'SET_PARTNER_TOKEN';
 };
 
-const usePartnerDispatch = ({ACTION}: Props) => {
+const usePartnerDispatch = ({ACTION}: partnerActionType) => {
   const dispatch = useDispatch();
 
   const onAction = (payload: any) => {
     dispatch({type: ACTION, payload});
+    storage.setItem(ACTION, payload);
   };
 
   return {onAction};

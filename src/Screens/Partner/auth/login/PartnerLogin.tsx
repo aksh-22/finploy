@@ -49,7 +49,6 @@ const PartnerLogin = (props: Props) => {
 
   // Hooks imported
   const token = useSelector((state: any) => state.partnerUserReducer.token);
-  console.log('token', JSON.stringify(token, null, 2));
   const {onAction} = usePartnerDispatch({ACTION: 'SET_PARTNER_TOKEN'});
   const {isLoading, sendRequest} = useRequest({api: login, onSuccess});
   const {isLoading: otpLoading, sendRequest: otpSendRequest} = useRequest({
