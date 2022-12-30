@@ -1,4 +1,4 @@
 import {axiosInstance} from '../axiosInstance';
 
-export const login = (data: any) =>
+export const getAllJobs = (data: any) =>
   axiosInstance.get('partner/getAllJob', {params: data}).then(res => res?.data);

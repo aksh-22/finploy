@@ -25,7 +25,7 @@ import Colors from '../Theme/Colors';
 import International from './../Screens/Auth/International';
 import MyTabs from './Tabs';
 // import Landing from '../partner screen/landing';
-import Jobs from '../partner screen/Jobs';
+import Jobs from '../partner screen/Jobs/PartnerJobs';
 import Recruter from '../partner screen/Recruter';
 import Reports from '../partner screen/Reports';
 import SocialImage from '../partner screen/SocialImage';
