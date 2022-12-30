@@ -24,7 +24,7 @@ export default function HeaderPartner(props: any) {
         <TouchableOpacity
           // onPress={() => props.navigation.openDrawer()}
           onPress={() => {
-            navigation.navigate('MainMenu');
+            navigation.navigate('PartnerMenuStack');
           }}>
           <MenuIcon style={{margin: 5}} />
         </TouchableOpacity>

@@ -39,6 +39,7 @@ const PartnerLogin = (props: Props) => {
   };
 
   const onOtpSuccess = (otpFetchedData: any) => {
+    console.log('otpFetchedData', JSON.stringify(otpFetchedData, null, 2));
     onAction(otpFetchedData.data.token);
   };
 

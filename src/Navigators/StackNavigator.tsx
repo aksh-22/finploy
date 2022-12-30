@@ -152,11 +152,11 @@ function AuthStackNavigator() {
         name="Tutorials-p"
         component={Tutorials}
       />
-      <Stack.Screen
+      {/* <Stack.Screen
         options={{headerShown: false}}
         name="Jobs-p"
         component={Jobs}
-      />
+      /> */}
       <Stack.Screen
         options={{headerShown: false}}
         name="Withdraw-p"

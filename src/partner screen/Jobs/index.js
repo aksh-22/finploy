@@ -14,7 +14,7 @@ import {colors} from '../../Utils/colors';
 import HeaderBar from '../../components/Header';
 import {hp, wp} from '../../Theme/Dimensions';
 import CheckBox from '../../components/smallcheckbox';
-import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
+// import Partnertabs from '../../Navigators/partnerStack/PartnerTabs';
 // import Headerpartner from '../../components/Header-p';
 // import { CheckBoxComponent } from "@react-native-community/checkbox"
 
@@ -218,9 +218,9 @@ const Jobs = () => {
           <Footer />
         </View>
       </ScrollView>
-      <View style={{marginBottom: hp(8), backgroundColor: 'white'}}>
+      {/* <View style={{marginBottom: hp(8), backgroundColor: 'white'}}>
         <Partnertabs />
-      </View>
+      </View> */}
     </View>
   );
 };
